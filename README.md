@@ -12,7 +12,7 @@ $ docker run -it --rm --name my-running-app my-php-app
 To run the Apache/php image WITHOUT a dockerfile, run this command:
 
 ```sh
-docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.2-apache # This line for *nix users
+$ docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.2-apache # This line for *nix users
 ```
 Here update your PWD according to your working directory if you are a windows user.
 
