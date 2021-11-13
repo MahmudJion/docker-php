@@ -63,5 +63,41 @@ php artisan serve
 For running the app, we can easily type this command
 
 ```sh
-docker-compose up
+$ docker-compose up
+```
+
+## Codeigniter 3
+
+From the command prompt run the following command. Make sure you are in the project folder.
+
+```sh
+$ docker-compose up -d
+```
+
+## Codeigniter 4
+
+Build the image:
+
+```sh
+$ docker build . -t codeigniter:4.1.5
+```
+
+Start the container:
+
+```sh
+$ docker container run -it --publish 80:80 --name ci4 -v /localfolder:/var/www/html codeigniter:4.1.5
+```
+
+### With Docker Composer
+
+From your project directory, start up your application by running:
+
+```sh
+$ docker-compose up -d
+```
+
+From your project directory, stop your application by running:
+
+```sh
+$ docker-compose down --volumes
 ```
