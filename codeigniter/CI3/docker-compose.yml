@@ -1,6 +1,6 @@
 version: '2'
 services:
-  docker-CI3:
+  myapp:
     image: docker.io/bitnami/codeigniter:3
     ports:
       - '8000:8000'
