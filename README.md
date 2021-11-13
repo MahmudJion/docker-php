@@ -27,3 +27,41 @@ Running and Down the docker-composer
 $ docker-compose up -d
 $ docker-compose down
 ```
+
+
+## Laravel
+
+Build your Dockerfile
+
+```sh
+$ docker build -t my_app .
+```
+Then, we may need to see the Image ID using this command.
+
+```sh
+$ docker image ls
+```
+Copy the image ID from the lists, and then we can run the image.
+
+```sh
+$ docker run -p 8000:8000 -d <imageID>
+```
+Then, we can get access to its command line using this command:
+
+```sh
+$ docker exec -it <container ID> sh
+```
+
+Inside the container command line, we can start the server using the usual
+
+```sh
+php artisan serve
+```
+
+### Running the Image with Docker Compose
+
+For running the app, we can easily type this command
+
+```sh
+docker-compose up
+```
